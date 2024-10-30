@@ -10,6 +10,7 @@
     homeDirectory = "/home/nixy";
     stateVersion = "24.05";
     packages = [
+      pkgs.ripgrep
       pkgs.fastfetch
       pkgs.btop
       pkgs.tor-browser

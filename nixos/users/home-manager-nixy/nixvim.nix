@@ -6,6 +6,8 @@
     ./vimPlugins/telescope.nix
     ./vimPlugins/cmp.nix
     ./vimPlugins/floaterm.nix
+    ./vimPlugins/treesitter.nix
+    ./vimPlugins/formatter.nix
   ];
 
   programs.nixvim = {

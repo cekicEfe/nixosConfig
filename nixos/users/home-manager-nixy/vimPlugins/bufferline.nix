@@ -6,7 +6,6 @@
       bufferline = 
       {
 	enable = true;
-
       };
     };
   };

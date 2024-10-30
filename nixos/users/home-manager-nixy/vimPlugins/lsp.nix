@@ -1,7 +1,5 @@
 {
   programs.nixvim.plugins = {
-    lsp-format.enable = true;
-
     lsp = {
       keymaps = {
 	silent = true;
@@ -23,10 +21,12 @@
 
       enable = true;
       servers = {
-pyright.enable = true;
-nixd.enable = true;
+	pyright.enable = true;
+	nixd.enable = true;
 	clangd.enable = true;
       };
+  
+      inlayHints = true;
     };
   };
 }
