@@ -15,6 +15,8 @@
 		alacritty
 		ranger
 		feh
+		btar
+		unrar
 
 		libreoffice-qt6-still	
 

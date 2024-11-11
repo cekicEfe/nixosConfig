@@ -4,7 +4,7 @@
 	users.users.nixy = {
                 isNormalUser = true;
                 description = "nixy";
-                extraGroups = [ "video" "networkmanager" "wheel" "input" "disk" ];
+                extraGroups = [ "docker" "video" "networkmanager" "wheel" "input" "disk" ];
                 packages = with pkgs;
 		[];
         };

@@ -20,6 +20,9 @@
       pkgs.zoom-us
       pkgs.kicad
       pkgs.cmatrix
+      pkgs.cataclysm-dda
+      pkgs.dwarf-fortress
+      pkgs.rar
     ];
   };
 
