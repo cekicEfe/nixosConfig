@@ -33,13 +33,6 @@
 	  ./nixos/configuration.nix
 	  inputs.nixvim.nixosModules.nixvim
 	  inputs.home-manager.nixosModules.default
-	  ({self,system,...}:{
-	    environment.systemPackages = with self.inputs.nix-alien.packages.${system};
-	    [
-	      nix-alien
-	    ];
-	    programs.nix-ld.enable = true;
-	  })
 	];
     };
   

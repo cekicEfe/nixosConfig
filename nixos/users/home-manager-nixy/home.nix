@@ -9,6 +9,9 @@
     username = "nixy"; 
     homeDirectory = "/home/nixy";
     stateVersion = "24.05";
+
+    shellAliases = ./bashAliases.nix;
+
     packages = [
       pkgs.ripgrep
       pkgs.fastfetch
@@ -31,10 +34,4 @@
     userName = "cekicEfe";
     userEmail = "efecekic0@gmail.com";
   };
-
-  programs.bash = 
-  {
-    enable = true;
-  };
-
 }

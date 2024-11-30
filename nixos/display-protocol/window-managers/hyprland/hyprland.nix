@@ -1,19 +1,14 @@
-{pkgs,...}: 
-let 
-  options = import ../../options.nix;
-in{
-
+{pkgs,...}:
+{
   imports = 
   [
-    ../xserver/xserver.nix
+    ../../xserver.nix
   ];
-
-  services.displayManager.sddm.enable = true;
 
   programs.hyprland = {
     enable = true;
   };
-
+  
   environment.systemPackages = with pkgs; [
     waybar
     eww
@@ -29,12 +24,10 @@ in{
 
     kitty
 
-    ##app launcher
     rofi-wayland
-
   ];
 
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  #xdg.portal.enable = true;
+  #xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
 }

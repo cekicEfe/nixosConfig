@@ -8,7 +8,7 @@
   imports = [
   	./hardware-configuration.nix
 	./packages.nix
-	./dm-wms/dm-wms.nix
+	./display-protocol/display-protocol.nix
 	./modules/bundle.nix
 	./bootloader/bootloader.nix
 	./users/users.nix

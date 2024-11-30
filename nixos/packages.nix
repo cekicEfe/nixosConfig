@@ -8,6 +8,7 @@
 	
 	environment.systemPackages = with pkgs; 
 	[
+		#useless programs
 		neofetch
 		neovim
 		libsForQt5.okular	
@@ -17,11 +18,18 @@
 		feh
 		btar
 		unrar
-
+		nitrogen
+		pipewire
+		pulseaudio
 		libreoffice-qt6-still	
+		wine
 
+		#dev packages
 		gnumake
 		arch-install-scripts
+		pkgsCross.mingw32.buildPackages.gcc	
+		pkgsCross.mingwW64.buildPackages.gcc
+		libGL.dev		
 		unzip
 		zip
 		nodejs
@@ -29,12 +37,11 @@
 		gcc
 		cmake
 		git
-
-		pipewire
-		pulseaudio
-
+		
+		#home manager
 		home-manager
 
+		#xorg things
 		xorg.xkill
 		xwayland
 		xclip

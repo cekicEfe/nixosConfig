@@ -5,12 +5,16 @@
     ./vimPlugins/neotree.nix
     ./vimPlugins/telescope.nix
     ./vimPlugins/cmp.nix
-    ./vimPlugins/floaterm.nix
     ./vimPlugins/treesitter.nix
     ./vimPlugins/formatter.nix
+    ./vimPlugins/noice.nix
+    ./vimPlugins/lsp-signature.nix
   ];
 
   programs.nixvim = {
+    
+    # mark
+    
     enable = true;
     defaultEditor = true;
     plugins.lualine.enable = true; 

@@ -10,5 +10,6 @@
 		./trim/trim.nix
 
 		./firewall/firewall.nix
-	];
+		./deamons/logind.nix
+      ];
 }
