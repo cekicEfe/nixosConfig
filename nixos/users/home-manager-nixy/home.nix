@@ -1,16 +1,11 @@
-{ pkgs, ... }:{
+{ pkgs, ... }: {
 
-  imports = [
-    ./alacritty.nix
-    ./nixvim.nix
-  ];
+  imports = [ ./alacritty.nix ./nixvim.nix ./helix.nix ];
 
   home = {
-    username = "nixy"; 
+    username = "nixy";
     homeDirectory = "/home/nixy";
     stateVersion = "24.05";
-
-    shellAliases = ./bashAliases.nix;
 
     packages = [
       pkgs.ripgrep
@@ -26,7 +21,13 @@
       pkgs.cataclysm-dda
       pkgs.dwarf-fortress
       pkgs.rar
+      pkgs.evince
     ];
+  };
+
+  programs.bash = {
+    enable = true;
+    initExtra = "\n      export VISUAL=hx;\n      export EDITOR=hx;\n    ";
   };
 
   programs.git = {

@@ -12,12 +12,8 @@
   ];
 
   programs.nixvim = {
-    
-    # mark
-    
     enable = true;
-    defaultEditor = true;
-    plugins.lualine.enable = true; 
+    plugins.lualine.enable = true;
     globals.mapleader = " ";
 
     colorschemes.tokyonight = {
@@ -26,28 +22,26 @@
     };
 
     opts = {
-      number = true;         # Show line numbers
+      number = true; # Show line numbers
       relativenumber = true; # Show relative line numbers
-      shiftwidth = 2;        # Tab width should be 2
+      shiftwidth = 2; # Tab width should be 2
     };
 
     plugins = {
-      transparent = {	
-	enable = true;
-	settings = {
-	  exclude_groups = [ ];
-	  extra_groups = [
-	    "BufferLineTabClose"
-	    "BufferLineBufferSelected"
-	    "BufferLineFill"
-	    "BufferLineBackground"
-	    "BufferLineSeparator"
-	    "BufferLineIndicatorSelected"
-	  ];
-	};
+      transparent = {
+        enable = true;
+        settings = {
+          exclude_groups = [ ];
+          extra_groups = [
+            "BufferLineTabClose"
+            "BufferLineBufferSelected"
+            "BufferLineFill"
+            "BufferLineBackground"
+            "BufferLineSeparator"
+            "BufferLineIndicatorSelected"
+          ];
+        };
       };
     };
-
-
   };
 }

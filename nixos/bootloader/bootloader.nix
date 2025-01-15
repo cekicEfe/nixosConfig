@@ -1,7 +1,10 @@
 {
-  boot.loader = 
-  {
-    systemd-boot.enable = true;
+  boot.loader = {
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+    };
     efi.canTouchEfiVariables = true;
   };
 }

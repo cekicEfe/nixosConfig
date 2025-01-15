@@ -1,10 +1,6 @@
 {
   programs.alacritty = {
     enable = true;
-    settings = {
-      font = {
-	size = 7.8;
-      };
-    };
+    settings = { font = { size = 8.5; }; };
   };
 }
