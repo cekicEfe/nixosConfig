@@ -1,6 +1,11 @@
 { pkgs, ... }: {
-  home.packages =
-    [ pkgs.clang-tools pkgs.nixfmt pkgs.python312Packages.python-lsp-server ];
+  home.packages = [
+    pkgs.clang-tools
+    pkgs.nixfmt
+    pkgs.python312Packages.python-lsp-server
+    pkgs.lua-language-server
+    pkgs.texlab
+  ];
   programs.helix = {
     defaultEditor = true;
     enable = true;
