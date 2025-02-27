@@ -5,10 +5,12 @@
     pkgs.python312Packages.python-lsp-server
     pkgs.lua-language-server
     pkgs.texlab
+    pkgs.nil
   ];
   programs.helix = {
     defaultEditor = true;
     enable = true;
+
     settings = {
       theme = "tokyonight";
       editor.cursor-shape = {
@@ -17,6 +19,14 @@
         select = "underline";
       };
     };
+
+    themes = {
+      tokyonight = {
+        "inherits" = "tokyonight";
+        "ui.background" = { };
+      };
+    };
+
     languages.language = [
       {
         name = "nix";
