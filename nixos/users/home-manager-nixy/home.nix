@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-
+{ pkgs, config, ... }: {
   imports = [ ./alacritty.nix ./nixvim.nix ./helix.nix ];
 
   home = {
@@ -7,7 +6,20 @@
     homeDirectory = "/home/nixy";
     stateVersion = "24.05";
 
+    file."${config.xdg.configHome}" = {
+      source = ./dotfiles;
+      recursive = true;
+    };
+
+    shellAliases = {
+      snrsf = "sudo nixos-rebuild switch --flake .#";
+      hmsf = "home-manager switch --flake .#nixy";
+    };
+
     packages = [
+      pkgs.xorg.xmag
+      pkgs.bottles
+      pkgs.vscode
       pkgs.ripgrep
       pkgs.fastfetch
       pkgs.btop
@@ -21,13 +33,17 @@
       pkgs.cataclysm-dda
       pkgs.dwarf-fortress
       pkgs.rar
+      pkgs.kdePackages.kate
+      pkgs.tmux
       pkgs.evince
+      pkgs.konsole
+      pkgs.mars-mips
     ];
   };
 
   programs.bash = {
     enable = true;
-    initExtra = "\n      export VISUAL=hx;\n      export EDITOR=hx;\n    ";
+    initExtra = "\n      export VISUAL=nvim;\n      export EDITOR=nvim;\n    ";
   };
 
   programs.git = {

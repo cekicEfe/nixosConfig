@@ -1,9 +1,9 @@
 {
   services.xserver = {
     desktopManager = {
-      xterm.enable = false;
+      xterm.enable = true;
       xfce = {
-        enableXfwm = false;
+        enableXfwm = true;
         noDesktop = true;
         enable = true;
       };

@@ -5,7 +5,7 @@
     pkgs.python312Packages.python-lsp-server
     pkgs.lua-language-server
     pkgs.texlab
-    pkgs.nil
+    pkgs.nixd
   ];
   programs.helix = {
     defaultEditor = true;
@@ -27,10 +27,25 @@
       };
     };
 
+    languages = {
+      language-server = {
+        nixd = {
+          command = "${pkgs.nixd}/bin/nixd";
+          # command = "nil";
+          config.nil = {
+            formatting.command = [ "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt" ];
+            # formatting.command = [ "alejandra" "-q" ];
+            nix.flake.autoEvalInputs = true;
+          };
+        };
+      };
+    };
+
     languages.language = [
       {
         name = "nix";
         auto-format = true;
+        language-servers = [ "nixd" ];
         formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
       }
       {

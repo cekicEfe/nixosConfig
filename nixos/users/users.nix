@@ -1,6 +1,1 @@
-{
-	imports = 
-	[
-		./nixy.nix
-	];
-}
+{ imports = [ ./nixy.nix ]; }

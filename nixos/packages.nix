@@ -21,6 +21,7 @@
     pulseaudio
     libreoffice-qt6-still
     wine
+    xfce.xfce4-pulseaudio-plugin
 
     #dev packages
     gnumake

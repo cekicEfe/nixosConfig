@@ -1,8 +1,1 @@
-{
-  programs.nixvim.plugins = 
-  {
-    lsp-signature = {
-      enable = true;
-    };
-  };
-}
+{ } # { programs.nixvim.plugins = { lsp-signature = { enable = true; }; }; }
