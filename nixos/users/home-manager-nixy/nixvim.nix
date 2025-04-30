@@ -9,6 +9,7 @@
     ./vimPlugins/noice.nix
     ./vimPlugins/lsp-signature.nix
     ./vimPlugins/alpha.nix
+    ./vimPlugins/lsp-lines.nix
   ];
 
   programs.nixvim = {

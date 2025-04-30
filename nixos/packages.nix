@@ -1,6 +1,9 @@
 { pkgs, ... }: {
   nixpkgs.config = {
-    permittedInsecurePackages = [ "python-2.7.18.8" "electron-25.9.0" ];
+    permittedInsecurePackages = [
+      "python-2.7.18.8"
+      "electron-25.9.0" # "googleearth-pro"
+    ];
     allowUnfree = true;
   };
 
@@ -16,28 +19,18 @@
     feh
     btar
     unrar
-    nitrogen
     pipewire
     pulseaudio
     libreoffice-qt6-still
     wine
     xfce.xfce4-pulseaudio-plugin
-
-    #dev packages
-    gnumake
-    arch-install-scripts
-    pkgsCross.mingw32.buildPackages.gcc
-    pkgsCross.mingwW64.buildPackages.gcc
-    pkgs.haskell-language-server
-    ghc
-    libGL.dev
     unzip
     zip
-    nodejs
-    python
-    gcc
-    cmake
-    git
+
+    #important
+    # gcc
+    # clang
+    # cmake
 
     #home manager
     home-manager

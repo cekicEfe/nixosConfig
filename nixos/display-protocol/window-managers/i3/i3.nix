@@ -21,7 +21,7 @@
     activeOpacity = 1;
     backend = "glx";
     settings = {
-      corner-radius = 10;
+      #corner-radius = 10;
       blur = {
         method = "dual_kawase";
         background = true;

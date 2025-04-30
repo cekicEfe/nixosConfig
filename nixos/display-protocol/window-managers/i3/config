@@ -12,8 +12,8 @@
 set $mod Mod4
 
 exec --no-startup-id feh --bg-scale ~/.config/myWallPaper.png
-gaps inner 20
-gaps outer 10 
+# gaps inner 20
+# gaps outer 10 
 title_align center
 
 # Font for window titles. Will also be used by the bar unless a different font

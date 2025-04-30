@@ -64,7 +64,7 @@
             position = "center";
           };
           type = "text";
-          val = "Today god is dead";
+          val = "Can you see this ?";
         }
       ];
     };
