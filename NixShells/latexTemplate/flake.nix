@@ -14,22 +14,18 @@
 
           # Dependencies for project
           buildInputs = [
-            #
-            pkgs.gcc
-            pkgs.cmake
-            pkgs.clang
-            pkgs.valgrind
-            pkgs.gdb
+            pkgs.texliveTeTeX
+            pkgs.texlab
+            #pkgs.texstudio
+            #pkgs.texmaker
           ];
 
           #links libraries to shell
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
-            #
-            pkgs.gcc
-            pkgs.cmake
-            pkgs.clang
-            pkgs.valgrind
-            pkgs.gdb
+            pkgs.texliveTeTeX
+            pkgs.texlab
+            #pkgs.texstudio
+            #pkgs.texmaker
           ];
 
           shellHook = ''

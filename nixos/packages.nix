@@ -26,6 +26,7 @@
     xfce.xfce4-pulseaudio-plugin
     unzip
     zip
+    unixtools.xxd
 
     #important
     # gcc

@@ -10,6 +10,12 @@
     ./vimPlugins/lsp-signature.nix
     ./vimPlugins/alpha.nix
     ./vimPlugins/lsp-lines.nix
+    ./vimPlugins/hex.nix
+    ./vimPlugins/cmp-latex-symbols.nix
+    ./vimPlugins/hlchunk.nix
+    #./vimPlugins/smear-cursor.nix
+    #./vimPlugins/colorizer.nix
+
   ];
 
   programs.nixvim = {

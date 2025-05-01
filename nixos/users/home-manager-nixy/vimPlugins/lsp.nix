@@ -25,6 +25,7 @@
         nixd.enable = true;
         clangd.enable = true;
         hls.enable = true;
+        ltex.enable = true;
       };
 
       inlayHints = true;
