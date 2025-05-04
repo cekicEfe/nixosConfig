@@ -10,6 +10,8 @@
         normal = {
           family = "JetBrains Mono";
           style = "Bold";
+          #family = "Hasklig";
+          #style = "Bold";
         };
       };
 

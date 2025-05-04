@@ -1,19 +1,19 @@
 {
   imports = [
-    ./vimPlugins/lsp.nix
-    ./vimPlugins/neotree.nix
-    ./vimPlugins/telescope.nix
-    ./vimPlugins/cmp.nix
-    ./vimPlugins/treesitter.nix
-    ./vimPlugins/formatter.nix
-    ./vimPlugins/noice.nix
-    ./vimPlugins/lsp-signature.nix
-    ./vimPlugins/alpha.nix
-    ./vimPlugins/lsp-lines.nix
-    ./vimPlugins/hex.nix
-    ./vimPlugins/cmp-latex-symbols.nix
-    ./vimPlugins/hlchunk.nix
-    #./vimPlugins/smear-cursor.nix
+    ./VimPlugins/lsp.nix
+    ./VimPlugins/neotree.nix
+    ./VimPlugins/telescope.nix
+    ./VimPlugins/cmp.nix
+    ./VimPlugins/treesitter.nix
+    ./VimPlugins/formatter.nix
+    ./VimPlugins/noice.nix
+    ./VimPlugins/lsp-signature.nix
+    ./VimPlugins/alpha.nix
+    ./VimPlugins/lsp-lines.nix
+    ./VimPlugins/hex.nix
+    ./VimPlugins/cmp-latex-symbols.nix
+    #./VimPlugins/hlchunk.nix
+    ./VimPlugins/smear-cursor.nix
     #./vimPlugins/colorizer.nix
 
   ];
@@ -51,7 +51,7 @@
 
     opts = {
       number = true; # Show line numbers
-      relativenumber = true; # Show relative line numbers
+      relativenumber = false; # Show relative line numbers
       shiftwidth = 2; # Tab width should be 2
     };
 

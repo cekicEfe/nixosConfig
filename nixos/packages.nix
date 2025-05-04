@@ -15,6 +15,7 @@
     libsForQt5.okular
     wget
     alacritty
+    kitty
     ranger
     feh
     btar

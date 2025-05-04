@@ -1,5 +1,11 @@
 { pkgs, config, ... }: {
-  imports = [ ./alacritty.nix ./nixvim.nix ./helix.nix ];
+  imports = [
+    #
+    ./alacritty.nix
+    ./nixvim.nix
+    ./helix.nix
+    ./kitty.nix
+  ];
 
   home = {
     username = "nixy";
@@ -17,6 +23,7 @@
     };
 
     packages = [
+      pkgs.hasklig
       pkgs.xorg.xmag
       pkgs.bottles
       pkgs.vscode

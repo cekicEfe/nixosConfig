@@ -64,7 +64,7 @@
             position = "center";
           };
           type = "text";
-          val = "Can you see this ?";
+          val = "Behold !";
         }
       ];
     };
