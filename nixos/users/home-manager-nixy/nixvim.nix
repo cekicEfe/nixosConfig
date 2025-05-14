@@ -12,15 +12,16 @@
     ./VimPlugins/lsp-lines.nix
     ./VimPlugins/hex.nix
     ./VimPlugins/cmp-latex-symbols.nix
+    ./VimPlugins/jupytext.nix
     #./VimPlugins/hlchunk.nix
-    ./VimPlugins/smear-cursor.nix
+    #./VimPlugins/smear-cursor.nix
     #./vimPlugins/colorizer.nix
-
   ];
 
   programs.nixvim = {
     enable = true;
     plugins.lualine.enable = true;
+    plugins.web-devicons.enable = true;
     globals.mapleader = " ";
 
     colorschemes.catppuccin = {
@@ -54,22 +55,5 @@
       relativenumber = false; # Show relative line numbers
       shiftwidth = 2; # Tab width should be 2
     };
-
-    #plugins = {
-    #  transparent = {
-    #    enable = true;
-    #    settings = {
-    #      exclude_groups = [ ];
-    #      extra_groups = [
-    #        "BufferLineTabClose"
-    #        "BufferLineBufferSelected"
-    #        "BufferLineFill"
-    #        "BufferLineBackground"
-    #        "BufferLineSeparator"
-    #        "BufferLineIndicatorSelected"
-    #      ];
-    #    };
-    #  };
-    #};
   };
 }

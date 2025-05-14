@@ -16,23 +16,17 @@
     wget
     alacritty
     kitty
-    ranger
     feh
     btar
     unrar
     pipewire
     pulseaudio
     libreoffice-qt6-still
-    wine
     xfce.xfce4-pulseaudio-plugin
     unzip
     zip
     unixtools.xxd
-
-    #important
-    # gcc
-    # clang
-    # cmake
+    devenv
 
     #home manager
     home-manager

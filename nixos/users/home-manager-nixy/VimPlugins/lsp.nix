@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   programs.nixvim.plugins = {
     lsp = {
       keymaps = {
@@ -24,8 +24,16 @@
         pyright.enable = true;
         nixd.enable = true;
         clangd.enable = true;
+
         hls.enable = true;
+        hls.installGhc = false;
+
+        rust_analyzer.enable = true;
         ltex.enable = true;
+        # fsharp_language_server = {
+        #   enable = true;
+        #   package = pkgs.vimPlugins;
+        # };
       };
 
       inlayHints = true;

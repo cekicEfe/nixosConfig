@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   home.packages = [
     pkgs.clang-tools
-    pkgs.nixfmt
+    pkgs.nixfmt-classic
     pkgs.python312Packages.python-lsp-server
     pkgs.lua-language-server
     pkgs.texlab

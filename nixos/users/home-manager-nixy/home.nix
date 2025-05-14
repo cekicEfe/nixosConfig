@@ -1,16 +1,13 @@
 { pkgs, config, ... }: {
-  imports = [
-    #
-    ./alacritty.nix
-    ./nixvim.nix
-    ./helix.nix
-    ./kitty.nix
-  ];
+
+  imports = [ ./alacritty.nix ./nixvim.nix ./helix.nix ./kitty.nix ];
+
+  #programs.home-manager.enable = true;
 
   home = {
     username = "nixy";
     homeDirectory = "/home/nixy";
-    stateVersion = "24.05";
+    stateVersion = "24.11";
 
     file."${config.xdg.configHome}" = {
       source = ./dotfiles;
@@ -25,26 +22,27 @@
     packages = [
       pkgs.hasklig
       pkgs.xorg.xmag
-      pkgs.bottles
-      pkgs.vscode
+      #pkgs.bottles
+      #pkgs.vscode
+      pkgs.ranger
       pkgs.ripgrep
       pkgs.fastfetch
       pkgs.btop
       pkgs.tor-browser
-      pkgs.ranger
+      pkgs.yazi
       pkgs.mesa-demos
-      pkgs.wine
-      pkgs.zoom-us
-      pkgs.kicad
-      pkgs.cmatrix
-      pkgs.cataclysm-dda
-      pkgs.dwarf-fortress
+      #pkgs.wine
+      #pkgs.zoom-us
+      #pkgs.kicad
+      #pkgs.cmatrix
+      #pkgs.cataclysm-dda
+      #pkgs.dwarf-fortress
       pkgs.rar
-      pkgs.kdePackages.kate
-      pkgs.tmux
+      #pkgs.kdePackages.kate
+      #pkgs.tmux
       pkgs.evince
-      pkgs.konsole
-      pkgs.mars-mips
+      #pkgs.konsole
+      #pkgs.mars-mips
     ];
   };
 

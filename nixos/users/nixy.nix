@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   services.udisks2.enable = true;
   users.users.nixy = {
     isNormalUser = true;
