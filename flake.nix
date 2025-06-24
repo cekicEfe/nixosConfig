@@ -32,6 +32,15 @@
             inputs.home-manager.nixosModules.default
           ];
         };
+
+        desktop1 = nixpkgs-stable.lib.nixosSystem {
+          modules = [
+            #
+            ./desktop1
+            inputs.home-manager.nixosModules.default
+          ];
+        };
+
       };
 
       homeConfigurations.nixy =
