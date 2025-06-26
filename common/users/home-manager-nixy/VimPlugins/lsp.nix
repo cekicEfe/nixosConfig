@@ -32,6 +32,10 @@
         ltex.enable = true;
 
         clojure_lsp.enable = true;
+        racket_langserver = {
+          enable = true;
+          package = null;
+        };
 
         # fsharp_language_server = {
         #   enable = true;

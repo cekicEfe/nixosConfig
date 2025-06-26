@@ -13,6 +13,7 @@
     ./VimPlugins/hex.nix
     ./VimPlugins/cmp-latex-symbols.nix
     ./VimPlugins/jupytext.nix
+    ./VimPlugins/vim-slime.nix
     #./VimPlugins/hlchunk.nix
     #./VimPlugins/smear-cursor.nix
     #./vimPlugins/colorizer.nix
