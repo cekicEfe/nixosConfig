@@ -15,10 +15,9 @@
           # Dependencies for project
           buildInputs = [
             #
-            pkgs.sbcl
+            (pkgs.sbcl.withPackages (ps: with ps; [ alexandria local-time ]))
             pkgs.asdf-vm
             pkgs.roswell
-            pkgs.sbclPackages.cl-project
           ];
 
           #links libraries to shell
