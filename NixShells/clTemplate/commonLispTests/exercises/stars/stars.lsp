@@ -1,0 +1,11 @@
+(defun low-left-tri (size)
+  (when (> size 0)
+  (dotimes (i size)
+    (terpri)
+    (dotimes (j (+ i 1))
+      (prin1 "*"))))
+  (when (> size 0)
+    (print "f you")))
+
+(low-left-tri 5)
+(low-left-tri -5)
