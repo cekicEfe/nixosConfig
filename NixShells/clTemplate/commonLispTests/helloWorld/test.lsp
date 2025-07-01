@@ -13,8 +13,8 @@
          ((> ,var ,end))
        ,@body)))
 
-(do-primes (p 0 19)
-  (format t "Prime :~d," p))
+;;(do-primes (p 0 121)
+;;  (format t "Prime :~d," p))
 
 (defun foo (n)
   (dotimes (i 10)
@@ -22,8 +22,8 @@
       (when (> (* i j) n)
         (return-from foo (list i j))))))
 
-(defparameter *x* (make-array 5 :fill-pointer 0))
-(vector-push 'a *x*)
+;;(defparameter *x* (make-array 5 :fill-pointer 0))
+;;(vector-push 'a *x*)
 
 (defun read-my-file ()
   (let ((in (open "test.txt" :if-does-not-exist nil)))

@@ -3,8 +3,7 @@
     grub = {
       enable = true;
       efiSupport = true;
-      device = "nodev";
-      splashImage = ./linusFlipBird.jpeg;
+      device = "/boot";
     };
     efi.canTouchEfiVariables = true;
   };
