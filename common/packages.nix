@@ -12,8 +12,8 @@
     neofetch
     helix
     neovim
-    libsForQt5.okular
-    wget
+    #libsForQt5.okular
+    #wget
     alacritty
     kitty
     feh
@@ -21,19 +21,18 @@
     unrar
     pipewire
     pulseaudio
-    libreoffice-qt6-still
-    xfce.xfce4-pulseaudio-plugin
+    #libreoffice-qt6-still
+    #xfce.xfce4-pulseaudio-plugin
     unzip
     zip
     unixtools.xxd
-    devenv
+    #devenv
 
     #home manager
-    home-manager
+    #home-manager
 
     #xorg things
     xorg.xkill
-    xwayland
     xclip
   ];
   fonts.packages = with pkgs;
