@@ -8,7 +8,7 @@
     ../common/display-protocol/desktop-managers/xfce4/xfce4.nix
     #../common/display-protocol/premade/premadeKde.nix
 
-    #./extraConfig/extraConfig.nix
+    ./extraConfig
     ./bootloader/bootloader.nix
     ./hardware-configuration.nix
   ];

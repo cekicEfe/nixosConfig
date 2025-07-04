@@ -3,7 +3,7 @@
     grub = {
       enable = true;
       efiSupport = true;
-      device = "/boot";
+      device = "nodev";
     };
     efi.canTouchEfiVariables = true;
   };

@@ -1,5 +1,4 @@
 {
-  imports = [ ./nvidia.nix ];
   programs.steam = {
     enable = true;
     remotePlay.openFirewall =
