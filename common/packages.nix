@@ -28,7 +28,7 @@
     unixtools.xxd
     #devenv
 
-    #home manager
+    home-manager
     #home-manager
 
     #xorg things
