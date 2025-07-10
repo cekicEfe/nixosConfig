@@ -31,6 +31,7 @@
       pkgs.tor-browser
       pkgs.yazi
       pkgs.mesa-demos
+      pkgs.emacs
       #pkgs.wine
       #pkgs.zoom-us
       #pkgs.kicad
