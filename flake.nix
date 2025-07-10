@@ -34,7 +34,7 @@
           ];
         };
 
-        desktop1 = nixpkgs-oldstable.lib.nixosSystem {
+        desktop1 = nixpkgs-stable.lib.nixosSystem {
           modules = [
             #
             ./desktop1
