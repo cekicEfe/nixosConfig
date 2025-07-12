@@ -1,6 +1,6 @@
 {
   imports = [
-    ./importprograms/importprograms.nix
+    ./importprograms
     ./audio/audio.nix
     ./bluetooth/bluetooth.nix
     ./virtmanager/virtmanager.nix
