@@ -1,7 +1,7 @@
 {
   imports = [
     ./VimPlugins/lsp.nix
-    ./VimPlugins/neotree.nix
+    #./VimPlugins/neotree.nix
     ./VimPlugins/telescope.nix
     ./VimPlugins/cmp.nix
     ./VimPlugins/treesitter.nix
@@ -12,8 +12,8 @@
     ./VimPlugins/lsp-lines.nix
     ./VimPlugins/hex.nix
     ./VimPlugins/cmp-latex-symbols.nix
-    ./VimPlugins/jupytext.nix
-    ./VimPlugins/vim-slime.nix
+    #./VimPlugins/jupytext.nix
+    #./VimPlugins/vim-slime.nix
     #./VimPlugins/hlchunk.nix
     #./VimPlugins/smear-cursor.nix
     #./vimPlugins/colorizer.nix
@@ -24,6 +24,12 @@
     plugins.lualine.enable = true;
     plugins.web-devicons.enable = true;
     globals.mapleader = " ";
+
+    keymaps = [{
+      key = "<leader>nt";
+      action = ":Explore <CR>";
+      options.silent = true;
+    }];
 
     colorschemes.catppuccin = {
       enable = true;

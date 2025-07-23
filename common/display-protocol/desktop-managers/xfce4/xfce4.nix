@@ -9,4 +9,5 @@
       };
     };
   };
+  services.libinput.mouse.middleEmulation = false;
 }
