@@ -20,6 +20,7 @@
     };
 
     packages = [
+      pkgs.blender
       pkgs.hasklig
       pkgs.xorg.xmag
       #pkgs.bottles

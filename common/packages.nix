@@ -8,12 +8,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    #useless programs
     neofetch
     helix
     neovim
-    #libsForQt5.okular
-    #wget
     alacritty
     kitty
     feh
@@ -21,17 +18,13 @@
     unrar
     pipewire
     pulseaudio
-    #libreoffice-qt6-still
-    #xfce.xfce4-pulseaudio-plugin
     unzip
     zip
     unixtools.xxd
-    #devenv
+    #    ida-free
 
     home-manager
-    #home-manager
 
-    #xorg things
     xorg.xkill
     xclip
   ];

@@ -6,12 +6,12 @@
     ./VimPlugins/cmp.nix
     ./VimPlugins/treesitter.nix
     ./VimPlugins/formatter.nix
-    ./VimPlugins/noice.nix
+    ##./VimPlugins/noice.nix
     ./VimPlugins/lsp-signature.nix
     ./VimPlugins/alpha.nix
     ./VimPlugins/lsp-lines.nix
     ./VimPlugins/hex.nix
-    ./VimPlugins/cmp-latex-symbols.nix
+    #./VimPlugins/cmp-latex-symbols.nix
     #./VimPlugins/jupytext.nix
     #./VimPlugins/vim-slime.nix
     #./VimPlugins/hlchunk.nix
