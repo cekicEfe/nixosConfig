@@ -1,5 +1,5 @@
 {
-  description = "Ceng development environment";
+  description = "Latex development environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -29,7 +29,7 @@
           ];
 
           shellHook = ''
-            PS1="[\\u@\\h && CENG-DEV-ENV:\\w]\$ "
+            PS1="[\\u@\\h && LATEX-DEV-ENV:\\w]\$ "
           '';
         };
       });

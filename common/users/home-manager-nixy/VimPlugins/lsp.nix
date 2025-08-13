@@ -31,6 +31,8 @@
         rust_analyzer.enable = true;
         ltex.enable = true;
 
+        ocamllsp.enable = true;
+
         clojure_lsp.enable = true;
         racket_langserver = {
           enable = true;
