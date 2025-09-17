@@ -7,7 +7,7 @@
     ./VimPlugins/treesitter.nix
     ./VimPlugins/formatter.nix
     ##./VimPlugins/noice.nix
-    ./VimPlugins/lsp-signature.nix
+    #    ./VimPlugins/lsp-signature.nix
     ./VimPlugins/alpha.nix
     ./VimPlugins/lsp-lines.nix
     ./VimPlugins/hex.nix
