@@ -1,7 +1,9 @@
 { pkgs, config, ... }: {
 
-  imports = [ ./alacritty.nix ./nixvim.nix ./helix.nix ./kitty.nix ];
+  imports =
+    [ ./nushell.nix ./alacritty.nix ./nixvim.nix ./helix.nix ./kitty.nix ];
 
+  #not important right now
   #programs.home-manager.enable = true;
 
   home = {
@@ -21,29 +23,21 @@
 
     packages = [
       pkgs.blender
-      pkgs.hasklig
       pkgs.xorg.xmag
-      #pkgs.bottles
+      #pkgs.bottles ### UNSAFE
       #pkgs.vscode
       pkgs.ranger
       pkgs.ripgrep
       pkgs.fastfetch
       pkgs.btop
       pkgs.tor-browser
-      pkgs.yazi
       pkgs.mesa-demos
       pkgs.emacs
-      #pkgs.wine
       #pkgs.zoom-us
       #pkgs.kicad
-      #pkgs.cmatrix
       pkgs.cataclysm-dda
-      #pkgs.dwarf-fortress
       pkgs.rar
-      #pkgs.kdePackages.kate
-      #pkgs.tmux
       pkgs.evince
-      #pkgs.konsole
       #pkgs.mars-mips
     ];
   };

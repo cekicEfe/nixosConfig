@@ -14,20 +14,26 @@
     alacritty
     kitty
     feh
-    btar
-    unrar
+
     pipewire
     pulseaudio
+
+    btar
+    unrar
     unzip
     zip
+
     unixtools.xxd
-    #    ida-free
+
+    firefox
+    vscode
 
     home-manager
 
     xorg.xkill
     xclip
   ];
+
   fonts.packages = with pkgs;
     [
       jetbrains-mono
