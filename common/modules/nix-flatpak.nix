@@ -18,7 +18,7 @@ in {
   # ... your config
 
   # Configure nix-flatpak
-  services.flatpak = {
+  services.nix-flatpak = {
     enable = true;
     packages = [ "org.usebottles.bottles" ];
   };

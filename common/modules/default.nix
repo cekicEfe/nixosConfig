@@ -1,6 +1,6 @@
 {
   imports = [
-    ./nix-flatpak.nix
+    #./nix-flatpak.nix
     ./docker.nix
     ./audio.nix
     ./bluetooth.nix
