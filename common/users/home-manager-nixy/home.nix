@@ -24,8 +24,6 @@
     packages = [
       pkgs.blender
       pkgs.xorg.xmag
-      #pkgs.bottles ### UNSAFE
-      #pkgs.vscode
       pkgs.ranger
       pkgs.ripgrep
       pkgs.fastfetch
@@ -33,18 +31,15 @@
       pkgs.tor-browser
       pkgs.mesa-demos
       pkgs.emacs
-      #pkgs.zoom-us
-      #pkgs.kicad
       pkgs.cataclysm-dda
       pkgs.rar
       pkgs.evince
-      #pkgs.mars-mips
     ];
   };
 
   programs.bash = {
     enable = true;
-    initExtra = "\n      export VISUAL=nvim;\n      export EDITOR=nvim;\n    ";
+    #initExtra = "\n      export VISUAL=nvim;\n      export EDITOR=nvim;\n    ";
   };
 
   programs.git = {

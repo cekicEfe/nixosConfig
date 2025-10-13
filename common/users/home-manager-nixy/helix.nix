@@ -12,7 +12,7 @@
     enable = true;
 
     settings = {
-      theme = "tokyonight";
+      theme = "catppuccin_mocha";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
@@ -22,8 +22,8 @@
 
     themes = {
       tokyonight = {
-        "inherits" = "tokyonight";
-        "ui.background" = { };
+        "inherits" = "catppuccin_mocha";
+        #"ui.background" = { };
       };
     };
 
@@ -31,10 +31,8 @@
       language-server = {
         nixd = {
           command = "${pkgs.nixd}/bin/nixd";
-          # command = "nil";
           config.nil = {
             formatting.command = [ "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt" ];
-            # formatting.command = [ "alejandra" "-q" ];
             nix.flake.autoEvalInputs = true;
           };
         };
