@@ -14,7 +14,7 @@
         devShell = pkgs.mkShell {
 
           # Dependencies for project
-          buildInputs = [ pkgs.racket pkgs.raco ];
+          buildInputs = [ pkgs.racket ];
 
           #links libraries to shell
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
