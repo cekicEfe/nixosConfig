@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-  imports = [ ../../xserver.nix ];
+  imports = [ ../../../xserver.nix ];
 
   services.xserver = {
     windowManager.i3 = {
