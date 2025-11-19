@@ -21,16 +21,12 @@
             pkgs.valgrind
             pkgs.gdb
             pkgs.glib
+            pkgs.python3
           ];
 
           #links libraries to shell
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
             #
-            pkgs.gcc
-            pkgs.cmake
-            pkgs.clang
-            pkgs.valgrind
-            pkgs.gdb
             pkgs.glib
           ];
 

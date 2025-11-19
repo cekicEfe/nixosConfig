@@ -1,6 +1,7 @@
 {
   imports = [
     ./docker.nix
+    ./printer.nix
     ./audio.nix
     ./bluetooth.nix
     ./virtmanager.nix

@@ -40,22 +40,22 @@
     };
 
     languages.language = [
-      {
-        name = "nix";
-        auto-format = true;
-        language-servers = [ "nixd" ];
-        formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
-      }
-      {
-        name = "c";
-        auto-format = true;
-        formatter.command = "${pkgs.clang-tools}/bin/clang/tools/clang-format";
-      }
-      {
-        name = "cpp";
-        auto-format = true;
-        formatter.command = "${pkgs.clang-tools}/bin/clang/tools/clang-format";
-      }
+      # {
+      #   name = "nix";
+      #   auto-format = true;
+      #   language-servers = [ "nixd" ];
+      #   formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
+      # }
+      # {
+      #   name = "c";
+      #   auto-format = true;
+      #   formatter.command = "${pkgs.clang-tools}/bin/clang/tools/clang-format";
+      # }
+      # {
+      #   name = "cpp";
+      #   auto-format = true;
+      #   formatter.command = "${pkgs.clang-tools}/bin/clang/tools/clang-format";
+      # }
     ];
   };
 }
