@@ -12,7 +12,7 @@
 
     ../common/users/users.nix
 
-    ./extra.nix
+    ./extra/extra.nix
     ./bootloader/bootloader.nix
     ./hardware-configuration.nix
   ];
