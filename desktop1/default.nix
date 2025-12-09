@@ -11,6 +11,7 @@
     ../common/display-protocol/window-managers/i3/fancy/i3.nix
     ../common/display-protocol/desktop-managers/xfce4/xfce4.nix
 
+    ../common/msp430-udev.nix
     ./extraConfig
 
     ../common/kernelOptions
