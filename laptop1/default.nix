@@ -12,6 +12,7 @@
 
     ../common/users/users.nix
 
+    ../common/msp430-udev.nix
     ./extra/extra.nix
     ./bootloader/bootloader.nix
     ./hardware-configuration.nix

@@ -84,6 +84,7 @@
           # Use `-I $MSP_INC` to include msp430 headers
           export MSP_INC="${pkgs.lib.makeIncludePath [ msp430GccSupport ]}"
           export MSP_LIB="${pkgs.lib.makeLibraryPath [ msp430GccSupport ]}"
+          export MSP_LD_PATH="${msp430GccSupport}"
           export LIBRARY_PATH="${libraryPath}:$LIBRARY_PATH"
           export LD_LIBRARY_PATH="${ldLibraryPath}:$LD_LIBRARY_PATH"
         '';
