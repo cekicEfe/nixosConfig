@@ -17,7 +17,7 @@
             #
             pkgs.gcc
             pkgs.cmake
-            pkgs.clang
+            # pkgs.clang
             pkgs.valgrind
             pkgs.gdb
           ];
@@ -25,11 +25,6 @@
           #links libraries to shell
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
             #
-            pkgs.gcc
-            pkgs.cmake
-            pkgs.clang
-            pkgs.valgrind
-            pkgs.gdb
           ];
 
           shellHook = ''
