@@ -14,6 +14,8 @@
     alacritty
     kitty
     feh
+    codeberg-cli
+    libreoffice
 
     pipewire
     pulseaudio

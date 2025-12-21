@@ -24,9 +24,11 @@ int main(void) {
   P1OUT = 0x00;        // init them as off
 
   while (1) {
-    // light_red();
+    light_red();
+    __delay_cycles(2000000);
 
-    // light_green();
+    light_green();
+    __delay_cycles(2000000);
 
     light_red_and_green();
     __delay_cycles(2000000);
