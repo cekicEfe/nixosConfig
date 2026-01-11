@@ -1,0 +1,4 @@
+travel_delay = -1
+rest_delay = -1
+show_travel_trail = true
+show_more = false
