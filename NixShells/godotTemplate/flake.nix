@@ -1,5 +1,5 @@
 {
-  description = "DCSS environment";
+  description = "godot development environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -10,15 +10,21 @@
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = import nixpkgs { inherit system; };
       in {
+        devShell = pkgs.mkShell {
 
-        devShells.default = pkgs.mkShell {
+          # Dependencies for project
           buildInputs = [
-            (pkgs.callPackage ./crawl.nix { })
+            #
+            pkgs.godot
+          ];
 
+          #links libraries to shell
+          LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+            #
           ];
 
           shellHook = ''
-            PS1="[\\u@\\h && DCSS-ENV:\\w]\\$ "
+            PS1="[\\u@\\h && GODOT-DEV-ENV:\\w]\$ "
           '';
         };
       });

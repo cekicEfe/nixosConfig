@@ -6,6 +6,7 @@
     pkgs.lua-language-server
     pkgs.texlab
     pkgs.nixd
+    pkgs.godot
   ];
   programs.helix = {
     defaultEditor = true;
@@ -21,9 +22,10 @@
     };
 
     themes = {
-      tokyonight = {
+      catppuccin_mocha = {
         "inherits" = "catppuccin_mocha";
-        #"ui.background" = { };
+        #use this to make background transparant
+        "ui.background" = { };
       };
     };
 

@@ -1,7 +1,14 @@
 { pkgs, config, ... }: {
 
-  imports =
-    [ ./nushell.nix ./alacritty.nix ./nixvim.nix ./helix.nix ./kitty.nix ];
+  imports = [
+    ./nushell.nix
+    ./alacritty.nix
+
+    #./nixvim.nix
+    ./picom.nix
+    ./helix.nix
+    ./kitty.nix
+  ];
 
   #not important right now
   #programs.home-manager.enable = true;
@@ -27,6 +34,7 @@
       pkgs.ranger
       pkgs.ripgrep
       pkgs.fastfetch
+      pkgs.picom
       pkgs.btop
       pkgs.tor-browser
       pkgs.mesa-demos

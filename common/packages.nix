@@ -27,7 +27,12 @@
 
     unixtools.xxd
 
+    torctl # Fuck all of you that causes this
     firefox
+    librewolf
+    tor-browser
+    tor
+
     vscode
 
     home-manager
