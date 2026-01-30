@@ -1,7 +1,7 @@
 
 set $mod Mod4
 
-exec --no-startup-id feh --bg-scale ~/.config/myWallPaper.png
+exec --no-startup-id feh --bg-scale ~/.config/tetow.jpg
 gaps inner 5
 gaps outer 5 
 title_align center

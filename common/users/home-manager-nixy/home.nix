@@ -4,7 +4,8 @@
     ./nushell.nix
     ./alacritty.nix
 
-    # ./nixvim.nix
+    #./nixvim.nix
+    ./picom.nix
     ./helix.nix
     ./kitty.nix
   ];
@@ -33,6 +34,7 @@
       pkgs.ranger
       pkgs.ripgrep
       pkgs.fastfetch
+      pkgs.picom
       pkgs.btop
       pkgs.tor-browser
       pkgs.mesa-demos
