@@ -27,9 +27,10 @@
 
     unixtools.xxd
 
-    torctl # Fuck all of you that causes this
     firefox
     librewolf
+    (pkgs.callPackage ./customPackages/torctl/package.nix
+      { }) # Fuck all of you who make me use this shit
     tor-browser
     tor
 
