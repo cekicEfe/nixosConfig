@@ -6,8 +6,9 @@ int main(void) {
 	DCOCTL = CALDCO_1MHZ;
 
 	//PWM period
-	P1DIR |= BIT6;
-	P1SEL |= BIT6;
+	// We use the p1.6 to control the servo
+	P1DIR |= BIT6 | BIT1;
+	P1SEL |= BIT6 | BIT1;
 
 	while(1){
 		TACCR0 = 20000; //PWM per

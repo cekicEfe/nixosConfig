@@ -1,4 +1,4 @@
-#include <msp430.h>
+#include <msp430g2452.h>
 
 
 char morse_code[] = "-.-. .- -. . -.-.--";

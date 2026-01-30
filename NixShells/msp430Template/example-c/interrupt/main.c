@@ -1,22 +1,31 @@
-#include <msp430g2553.h>
+#include <msp430.h>
 
-void main(void) {
-  WDTCTL = WDTPW + WDTHOLD;       // Stop WDT
-  P1DIR |= 0x01;                  // P1.0 output
-  TACTL = TASSEL_2 + MC_2 + TAIE; // SMCLK, contmode, interrupt
-  _BIS_SR(LPM0_bits + GIE);       // Enter LPM0 w/ interrupt
+#define LED1 BIT0
+#define BUTTON BIT3
+
+int main(void) {
+  WDTCTL = WDTPW | WDTHOLD; // Stop WDT
+
+  P1DIR |= LED1;
+  P1DIR &= ~BUTTON;
+  P1DIR |= BUTTON;
+  P1OUT |= BUTTON;
+  P1OUT &= LED1;
+
+  _enable_interrupts();
+
+  P1IES |= BUTTON;
+  P1IE |= BUTTON;
+  P1IFG = 0x00;
+
+  while (1)
+    ;
+
+  return 0;
 }
 
-// Timer_A3 Interrupt Vector (TAIV) handler
-#pragma vector = TIMERA1_VECTOR
-__interrupt void Timer_A(void) {
-  switch (TAIV) {
-  case 2:
-    break; // CCR1 not used
-  case 4:
-    break; // CCR2 not used
-  case 10:
-    P1OUT ^= 0x01; // overflow
-    break;
-  }
+#pragma vector=TIMERA0_VECTOR
+__interrupt void PORT1_ISR(void) {
+  P1OUT ^= LED1;
+  P1IFG = 0x00;
 }
