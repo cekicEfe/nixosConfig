@@ -19,7 +19,8 @@
             pkgs.cmake
             # pkgs.clang
             pkgs.valgrind
-            pkgs.gdb
+            # pkgs.gdb
+            pkgs.gf
           ];
 
           #links libraries to shell
