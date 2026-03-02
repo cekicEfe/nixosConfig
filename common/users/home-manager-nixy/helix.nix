@@ -19,6 +19,10 @@
         insert = "bar";
         select = "underline";
       };
+
+      editor.lsp.display-inlay-hints = true;
+      editor.inline-diagnostics.cursor-line = "hint";
+      editor.inline-diagnostics.other-lines = "disable";
     };
 
     themes = {
