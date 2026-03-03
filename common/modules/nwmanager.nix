@@ -1,5 +1,10 @@
 {
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
-  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+
+  networking.useDHCP = false;
+  networking.dhcpcd.enable = false;
+
+  networking.nameservers =
+    [ "1.1.1.1" "1.0.0.1" "8.8.8.8" "8.8.4.4" "9.9.9.9" ];
 }
