@@ -39,6 +39,7 @@
 
     home-manager
 
+    ffmpeg-full
     xorg.xkill
     xclip
   ];

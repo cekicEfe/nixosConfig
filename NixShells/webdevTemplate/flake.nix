@@ -18,7 +18,7 @@
             pkgs.nodejs
             pkgs.dotnet-aspnetcore
             pkgs.dotnet-sdk
-            pkgs.dotnetCorePackages.dotnet_10
+            pkgs.typescript-language-server
           ];
 
           #links libraries to shell
