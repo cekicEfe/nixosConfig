@@ -24,6 +24,7 @@
     unrar
     unzip
     zip
+    ghostscript
 
     unixtools.xxd
 

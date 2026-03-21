@@ -13,8 +13,8 @@
 
         devShells.default = pkgs.mkShell {
           buildInputs = [
-            (pkgs.callPackage ./crawl.nix { })
-
+            # (pkgs.callPackage ./crawl.nix { })
+            pkgs.crawlTiles
           ];
 
           shellHook = ''
