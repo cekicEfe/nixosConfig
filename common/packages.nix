@@ -16,6 +16,8 @@
     feh
     codeberg-cli
     libreoffice
+    vim
+    tmux
 
     pipewire
     pulseaudio

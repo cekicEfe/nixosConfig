@@ -43,6 +43,7 @@
       pkgs.rar
       pkgs.evince
       pkgs.vim
+      pkgs.tmux
     ];
   };
 
