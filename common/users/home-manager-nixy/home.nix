@@ -42,12 +42,13 @@
       pkgs.cataclysm-dda
       pkgs.rar
       pkgs.evince
+      pkgs.vim
     ];
   };
 
   programs.bash = {
     enable = true;
-    #initExtra = "\n      export VISUAL=nvim;\n      export EDITOR=nvim;\n    ";
+    initExtra = "\n      export VISUAL=vim;\n      export EDITOR=vim;\n    ";
   };
 
   programs.git = {

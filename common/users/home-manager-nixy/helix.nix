@@ -9,7 +9,7 @@
     pkgs.godot
   ];
   programs.helix = {
-    defaultEditor = true;
+    # defaultEditor = true;
     enable = true;
 
     settings = {
