@@ -9,7 +9,7 @@
     pkgs.godot
   ];
   programs.helix = {
-    # defaultEditor = true;
+    defaultEditor = true;
     enable = true;
 
     settings = {
@@ -20,9 +20,9 @@
         select = "underline";
       };
 
-      editor.lsp.display-inlay-hints = true;
-      editor.inline-diagnostics.cursor-line = "hint";
-      editor.inline-diagnostics.other-lines = "disable";
+      editor.lsp.enable = false;
+      #editor.inline-diagnostics.cursor-line = "hint";
+      #editor.inline-diagnostics.other-lines = "disable";
     };
 
     themes = {

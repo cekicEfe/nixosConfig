@@ -49,7 +49,7 @@
 
   programs.bash = {
     enable = true;
-    initExtra = "\n      export VISUAL=vim;\n      export EDITOR=vim;\n    ";
+    #initExtra = "\n      export VISUAL=vim;\n      export EDITOR=vim;\n    ";
   };
 
   programs.git = {

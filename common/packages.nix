@@ -18,6 +18,7 @@
     libreoffice
     vim
     tmux
+    ast-grep
 
     pipewire
     pulseaudio
