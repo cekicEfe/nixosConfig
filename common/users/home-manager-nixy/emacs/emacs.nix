@@ -2,7 +2,15 @@
   programs.emacs = {
     enable = true;
     package = pkgs.emacs; # replace with pkgs.emacs-gtk if desired
-    extraPackages = epkgs: [ epkgs.nix-mode epkgs.nixfmt ];
+    extraPackages = epkgs: [
+      #
+      epkgs.nix-mode
+      epkgs.nixfmt
+      epkgs.company
+      epkgs.catppuccin-theme
+      epkgs.magit
+      epkgs.avy
+    ];
     extraConfig = pkgs.lib.readFile ./emacs_config.el;
   };
 }
