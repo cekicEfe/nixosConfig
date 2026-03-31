@@ -5,21 +5,14 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-oldstable.url = "github:nixos/nixpkgs/nixos-25.05";
-
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs-stable";
     };
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs-stable";
-    };
-
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, nixpkgs-oldstable, nixvim
-    , home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, nixpkgs-oldstable, home-manager
+    , ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs-stable {
@@ -49,10 +42,7 @@
       homeConfigurations.nixy =
         inputs.home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [
-            nixvim.homeManagerModules.nixvim
-            ./common/users/home-manager-nixy/home.nix
-          ];
+          modules = [ ./common/users/home-manager-nixy/home.nix ];
         };
     };
 }

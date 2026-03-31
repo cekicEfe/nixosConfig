@@ -7,11 +7,11 @@
       size = 11.5;
     };
     settings = {
-      scrollback_lines = 10000;
+      # scrollback_lines = 10000;
       enable_audio_bell = true;
       update_check_interval = 0;
       cursor_trail = 15;
-      background_opacity = 0.85;
+      # background_opacity = 0.85;
     };
   };
 }

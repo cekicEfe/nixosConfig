@@ -1,11 +1,8 @@
-{ pkgs, config, ... }: {
+{ pkgs, config,builtins, ... }: {
 
   imports = [
-    ./nushell.nix
     ./alacritty.nix
-
-    #./nixvim.nix
-    ./picom.nix
+    ./emacs/emacs.nix
     ./helix.nix
     ./kitty.nix
   ];
@@ -25,10 +22,19 @@
 
     shellAliases = {
       snrsf = "sudo nixos-rebuild switch --flake .#";
+      ems = "emacs -nw"; 
       hmsf = "home-manager switch --flake .#nixy";
     };
 
     packages = [
+      pkgs.clang-tools
+      pkgs.nixfmt-classic
+      pkgs.python312Packages.python-lsp-server
+      pkgs.lua-language-server
+      pkgs.texlab
+      pkgs.nixd
+      pkgs.godot
+
       pkgs.blender
       pkgs.xorg.xmag
       pkgs.ranger
@@ -38,7 +44,6 @@
       pkgs.btop
       pkgs.tor-browser
       pkgs.mesa-demos
-      pkgs.emacs
       pkgs.cataclysm-dda
       pkgs.rar
       pkgs.evince
@@ -47,9 +52,20 @@
     ];
   };
 
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = true;
+      character = {
+        success_symbol = "[➜](bold green)";
+        error_symbol = "[➜](bold red)";
+      };
+    };
+  };
+  
   programs.bash = {
     enable = true;
-    #initExtra = "\n      export VISUAL=vim;\n      export EDITOR=vim;\n    ";
+    initExtra = "export VISUAL='ems';export EDITOR='ems';";
   };
 
   programs.git = {
