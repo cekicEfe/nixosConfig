@@ -3,7 +3,7 @@
     enable = true;
     package = pkgs.emacs; # replace with pkgs.emacs-gtk if desired
     extraPackages = epkgs: [
-      #
+      epkgs.multiple-cursors
       epkgs.nix-mode
       epkgs.nixfmt
       epkgs.company
