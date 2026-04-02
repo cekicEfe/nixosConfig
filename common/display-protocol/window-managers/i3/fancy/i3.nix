@@ -1,17 +1,22 @@
-{ pkgs, lib, ... }: {
-
+{ pkgs, lib, customConfig, ... }:
+let
+  myI3Config = builtins.replaceStrings [ "$term" ]
+    [ (if customConfig.used_terminal == "kitty" then "kitty" else "alacritty") ]
+    (builtins.readFile ./config);
+in {
   imports = [ ../../../xserver.nix ];
 
   environment.etc."/xdg/i3status/config".text =
-    builtins.readFile ./i3statusconfig;
+    builtins.replaceStrings [ "$term" ]
+    [ (if customConfig.used_terminal == "kitty" then "kitty" else "alacritty") ]
+    (builtins.readFile ./i3statusconfig);
 
   services.xserver = {
     windowManager.i3 = {
       package = pkgs.i3;
       enable = true;
       extraPackages = with pkgs; [ dmenu i3status i3lock i3blocks ];
-
-      configFile = ./config;
+      configFile = pkgs.writeText "i3-config" myI3Config;
     };
   };
 }

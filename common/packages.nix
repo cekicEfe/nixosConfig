@@ -11,8 +11,10 @@
     neofetch
     helix
     neovim
+
     alacritty
     kitty
+
     feh
     codeberg-cli
     libreoffice

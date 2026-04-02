@@ -1,10 +1,10 @@
-{ pkgs, config,builtins, ... }: {
+{ pkgs, config, builtins, customConfig, ... }: {
 
   imports = [
-    ./alacritty.nix
     ./emacs/emacs.nix
     ./helix.nix
     ./kitty.nix
+    ./alacritty/alacritty.nix
   ];
 
   #not important right now
@@ -21,26 +21,19 @@
     };
 
     shellAliases = {
-      snrsf = "sudo nixos-rebuild switch --flake .#";
-      ems = "emacs -nw"; 
+      ems = "emacs -nw";
       hmsf = "home-manager switch --flake .#nixy";
     };
 
     packages = [
       pkgs.clang-tools
       pkgs.nixfmt-classic
-      pkgs.python312Packages.python-lsp-server
-      pkgs.lua-language-server
-      pkgs.texlab
-      pkgs.nixd
-      pkgs.godot
 
       pkgs.blender
       pkgs.xorg.xmag
       pkgs.ranger
       pkgs.ripgrep
       pkgs.fastfetch
-      pkgs.picom
       pkgs.btop
       pkgs.tor-browser
       pkgs.mesa-demos
@@ -62,7 +55,7 @@
       };
     };
   };
-  
+
   programs.bash = {
     enable = true;
     initExtra = "export VISUAL='ems';export EDITOR='ems';";

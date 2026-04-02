@@ -15,13 +15,20 @@
     , ... }@inputs:
     let
       system = "x86_64-linux";
+
       pkgs = import nixpkgs-stable {
         inherit system;
         config.allowUnfree = true;
       };
+
     in {
       nixosConfigurations = {
         laptop1 = nixpkgs-stable.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+            customConfig = { used_terminal = "alacritty"; };
+          };
+
           modules = [
             #
             ./laptop1
@@ -30,6 +37,10 @@
         };
 
         desktop1 = nixpkgs-stable.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+            customConfig = { used_terminal = "alacritty"; };
+          };
           modules = [
             #
             ./desktop1
