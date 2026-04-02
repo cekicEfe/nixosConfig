@@ -34,7 +34,7 @@
     firefox
     librewolf
     (pkgs.callPackage ./customPackages/torctl/package.nix
-      { }) # Fuck all of you who make me use this shit
+      { })
     tor-browser
     tor
 

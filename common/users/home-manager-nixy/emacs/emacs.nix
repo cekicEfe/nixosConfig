@@ -10,6 +10,7 @@
       epkgs.catppuccin-theme
       epkgs.magit
       epkgs.avy
+      epkgs.xclip
     ];
     extraConfig = pkgs.lib.readFile ./emacs_config.el;
   };

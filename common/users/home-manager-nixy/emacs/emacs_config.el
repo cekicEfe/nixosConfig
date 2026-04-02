@@ -7,3 +7,5 @@
 (tool-bar-mode -1)
 
 (add-hook 'after-init-hook 'global-company-mode)
+
+(xclip-mode 1) 
