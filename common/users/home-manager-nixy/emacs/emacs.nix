@@ -11,6 +11,7 @@
       epkgs.magit
       epkgs.avy
       epkgs.xclip
+      epkgs.markdown-mode
     ];
     extraConfig = pkgs.lib.readFile ./emacs_config.el;
   };
