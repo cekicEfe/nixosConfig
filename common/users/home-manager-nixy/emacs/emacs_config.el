@@ -12,6 +12,9 @@
 ;; Get rid of tool bar
 (tool-bar-mode -1)
 
+;; Get rid of menu bar
+(menu-bar-mode -1)
+
 ;; Init complete
 (add-hook 'after-init-hook 'global-company-mode)
 
@@ -29,3 +32,19 @@
       backup-by-copying t)  
 (make-directory "~/.emacs.d/backups/" t)  
 
+
+;; ------ Things releted with agda ------;;
+(setq treesit-extra-load-path '("/run/current-system/sw/lib"))
+
+(defun my-setup-agda-ts ()
+  "Setup tree-sitter for Agda."
+  (when (treesit-ready-p 'agda)
+    (treesit-parser-create 'agda)
+    ;; Treesit-font-lock-settings would go here
+    (treesit-major-mode-setup)))
+
+;; If you use the standard agda-mode, you can hook into it
+(add-hook 'agda-mode-hook #'my-setup-agda-ts)
+
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda --emacs-mode locate")))
