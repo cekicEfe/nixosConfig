@@ -22,7 +22,7 @@ in {
   home.sessionVariables.TREE_SITTER_QUERY_PATH = "${tree-sitter-agda}/queries";
 
   home.packages = [
-    tree-sitter-agda
+    #tree-sitter-agda
     pkgs.agda
     #pkgs.tree-sitter-grammars.tree-sitter-cmake
     #pkgs.tree-sitter-grammars.tree-sitter-nix
@@ -32,7 +32,9 @@ in {
     enable = true;
     package = pkgs.emacs; # replace with pkgs.emacs-gtk if desired
     extraPackages = epkgs: [
+      epkgs.treesit-grammars.with-all-grammars      
       epkgs.multiple-cursors
+      epkgs.move-text
       epkgs.nix-mode
       epkgs.nixfmt
       epkgs.company

@@ -32,6 +32,12 @@
       backup-by-copying t)  
 (make-directory "~/.emacs.d/backups/" t)  
 
+;; ------ Move Text Keybindings -------
+(global-set-key (kbd "M-<down>") 'move-text-down)
+(global-set-key (kbd "M-<up>") 'move-text-up)
+
+;; ------ Edit Multiple Lines ------
+(global-set-key (kbd "C-x C-a") 'mc/edit-lines)
 
 ;; ------ Things releted with agda ------;;
 (setq treesit-extra-load-path '("/run/current-system/sw/lib"))
