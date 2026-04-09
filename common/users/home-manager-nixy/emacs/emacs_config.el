@@ -3,9 +3,6 @@
 (setq-default indent-tabs-mode nil)
 (setq indent-line-function 'insert-tab)
 
-;; Show catppuccin
-(load-theme 'catppuccin :no-confirm)
-
 ;; Show line numbers
 (global-display-line-numbers-mode)
 

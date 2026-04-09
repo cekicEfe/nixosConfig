@@ -1,14 +1,14 @@
-{ pkgs, lib, customConfig, ... }:
+{ pkgs, lib,config , used_terminal, ... }:
 let
   myI3Config = builtins.replaceStrings [ "$term" ]
-    [ (if customConfig.used_terminal == "kitty" then "kitty" else "alacritty") ]
+    [ (if used_terminal == "kitty" then "kitty" else "alacritty") ]
     (builtins.readFile ./config);
 in {
   imports = [ ../../../xserver.nix ];
 
   environment.etc."/xdg/i3status/config".text =
     builtins.replaceStrings [ "$term" ]
-    [ (if customConfig.used_terminal == "kitty" then "kitty" else "alacritty") ]
+    [ (if used_terminal == "kitty" then "kitty" else "alacritty") ]
     (builtins.readFile ./i3statusconfig);
 
   services.xserver = {

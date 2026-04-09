@@ -1,4 +1,4 @@
-{ pkgs, config, builtins, customConfig, ... }: {
+{ pkgs, config, builtins, ... }: {
 
   imports = [
     ./emacs/emacs.nix
@@ -7,14 +7,11 @@
     ./alacritty/alacritty.nix
   ];
 
-  #not important right now
-  #programs.home-manager.enable = true;
-
   home = {
     username = "nixy";
     homeDirectory = "/home/nixy";
     stateVersion = "24.11";
-
+    
     file."${config.xdg.configHome}" = {
       source = ./dotfiles;
       recursive = true;
