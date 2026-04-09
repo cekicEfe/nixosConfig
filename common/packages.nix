@@ -45,6 +45,7 @@
     ffmpeg-full
     xorg.xkill
     xclip
+    home-manager
   ];
 
   fonts.packages = with pkgs;
