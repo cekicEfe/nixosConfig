@@ -18,19 +18,33 @@ let
 
 in {
 
-  home.packages = [ pkgs.agda ];
+  home.packages = [
+    #
+    pkgs.agda
+    pkgs.nixd
+    pkgs.haskell-language-server
+    pkgs.clang-tools
+  ];
 
   programs.emacs = {
     enable = true;
     package = pkgs.emacs;
 
     extraPackages = epkgs: [
+      epkgs.lsp-mode
+      epkgs.haskell-mode
+      epkgs.nix-mode
+      epkgs.rust-mode
+      epkgs.markdown-mode
+      epkgs.agda2-mode
+
       epkgs.treesit-grammars.with-all-grammars
       epkgs.multiple-cursors
       epkgs.move-text
-      epkgs.nix-mode
-      epkgs.nixfmt
       epkgs.company
+      epkgs.magit
+      epkgs.avy
+      epkgs.xclip
 
       (if emacs_theme == "yotsuba" then
         yotsuba-theme
@@ -38,12 +52,6 @@ in {
         epkgs.catppuccin-theme
       else
         null)
-
-      epkgs.magit
-      epkgs.avy
-      epkgs.xclip
-      epkgs.markdown-mode
-      epkgs.agda2-mode
     ];
 
     extraConfig = (pkgs.lib.readFile ./emacs_config.el)
