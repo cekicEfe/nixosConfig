@@ -55,7 +55,7 @@
 
   programs.bash = {
     enable = true;
-    initExtra = "export VISUAL='ems';export EDITOR='ems';";
+    initExtra = "export VISUAL='emacs -nw';export EDITOR='emacs -nw';";
   };
 
   programs.git = {

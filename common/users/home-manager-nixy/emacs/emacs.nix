@@ -16,6 +16,12 @@ let
     };
   };
 
+  sidetab = pkgs.emacsPackages.trivialBuild {
+    pname = "sidetab";
+    version = "1.0";
+    src = ./sidetab.el;
+  };
+  
 in {
 
   home.packages = [
@@ -37,7 +43,11 @@ in {
       epkgs.rust-mode
       epkgs.markdown-mode
       epkgs.agda2-mode
+      epkgs.org
 
+      sidetab
+      
+      epkgs.dumb-jump
       epkgs.treesit-grammars.with-all-grammars
       epkgs.multiple-cursors
       epkgs.move-text

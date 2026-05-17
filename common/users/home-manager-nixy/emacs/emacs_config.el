@@ -29,6 +29,13 @@
       backup-by-copying t)  
 (make-directory "~/.emacs.d/backups/" t)  
 
+;; Disable scroll bars
+(defun my/disable-scroll-bars (frame)
+  (modify-frame-parameters frame
+                           '((vertical-scroll-bars . nil)
+                             (horizontal-scroll-bars . nil))))
+(add-hook 'after-make-frame-functions 'my/disable-scroll-bars)
+
 ;; ------ Move Text Keybindings -------
 (global-set-key (kbd "M-<down>") 'move-text-down)
 (global-set-key (kbd "M-<up>") 'move-text-up)
