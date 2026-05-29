@@ -23,6 +23,7 @@
     };
 
     packages = [
+      pkgs.kazam
       pkgs.clang-tools
       pkgs.nixfmt-classic
 
@@ -55,7 +56,7 @@
 
   programs.bash = {
     enable = true;
-    initExtra = "export VISUAL='emacs -nw';export EDITOR='emacs -nw';";
+    initExtra = "export VISUAL='emacs';export EDITOR='emacs';";
   };
 
   programs.git = {

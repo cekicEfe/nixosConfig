@@ -12,13 +12,23 @@
 ;; Get rid of menu bar
 (menu-bar-mode -1)
 
-;; Init complete
+;; Disable scroll bar
+(scroll-bar-mode -1)
+
+;; Set font
+(set-frame-font "JetBrains Mono Bold 12" nil t)
+
+;; Disable horizontal scroll bar
+(horizontal-scroll-bar-mode -1)
+
+;; Init complete (company version)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Add xclip support so we can copy/paste from emacs
 (xclip-mode 1) 
 
 ;; Dunno probably gets rid of redundant save files
+;; Stole it from SO
 (setq make-backup-files t  
       backup-directory-alist '(("." . "~/.emacs.d/backups/"))  
       version-control 't  
@@ -40,21 +50,14 @@
 (global-set-key (kbd "M-<down>") 'move-text-down)
 (global-set-key (kbd "M-<up>") 'move-text-up)
 
+;; ------ Move Window Keybindings -------
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
+
 ;; ------ Edit Multiple Lines ------
 (global-set-key (kbd "C-x C-a") 'mc/edit-lines)
 
 ;; ------ Things releted with agda ------;;
 (setq treesit-extra-load-path '("/run/current-system/sw/lib"))
-
-(defun my-setup-agda-ts ()
-  "Setup tree-sitter for Agda."
-  (when (treesit-ready-p 'agda)
-    (treesit-parser-create 'agda)
-    ;; Treesit-font-lock-settings would go here
-    (treesit-major-mode-setup)))
-
-;; If you use the standard agda-mode, you can hook into it
-(add-hook 'agda-mode-hook #'my-setup-agda-ts)
-
-(load-file (let ((coding-system-for-read 'utf-8))
-                (shell-command-to-string "agda --emacs-mode locate")))

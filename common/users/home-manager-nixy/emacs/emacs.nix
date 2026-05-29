@@ -26,7 +26,7 @@ in {
 
   home.packages = [
     #
-    pkgs.agda
+    pkgs.jetbrains-mono
     pkgs.nixd
     pkgs.haskell-language-server
     pkgs.clang-tools
@@ -42,20 +42,29 @@ in {
       epkgs.nix-mode
       epkgs.rust-mode
       epkgs.markdown-mode
-      epkgs.agda2-mode
+      epkgs.dap-mode
       epkgs.org
-
-      sidetab
       
-      epkgs.dumb-jump
+      sidetab # Currently does not work sadly
+
+      epkgs.string-inflection
       epkgs.treesit-grammars.with-all-grammars
       epkgs.multiple-cursors
       epkgs.move-text
-      epkgs.company
       epkgs.magit
-      epkgs.avy
       epkgs.xclip
 
+      epkgs.dumb-jump
+      epkgs.company      
+      
+      #Auto complete plugins EMOCV (Not used)
+      # epkgs.embark
+      # epkgs.embark-consult
+      # epkgs.marginalia
+      # epkgs.orderless
+      # epkgs.consult
+      # epkgs.vertico
+      
       (if emacs_theme == "yotsuba" then
         yotsuba-theme
       else if emacs_theme == "catppuccin" then

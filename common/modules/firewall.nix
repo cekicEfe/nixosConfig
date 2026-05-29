@@ -2,7 +2,10 @@
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [
-      #
+      53 # For Cups
+      631 # For Cups
+      5353 # For Cups
+      
       80
       443
       22
@@ -29,7 +32,11 @@
       5291
     ];
     allowedUDPPorts = [
-      #
+      53 # For Cups
+      137 # For Cups
+      139 # For Cups
+      445 # For Cups
+      
       80
       443
       22
