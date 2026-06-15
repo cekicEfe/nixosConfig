@@ -1,8 +1,58 @@
-;;(setq standard-indent 2)
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 (setq indent-line-function 'insert-tab)
 
+
+(require 'exwm)
+
+
+(setq display-time-day-and-date t) 
+(setq display-time-24hr t) ;; Set to 't' prefer 24-hour time format 'nil' otherwise
+(display-time-mode 1)
+(tab-bar-mode 1)
+(setq tab-bar-format '(tab-bar-format-tabs 
+                       tab-bar-format-align-right 
+                       tab-bar-format-global))    
+
+
+;; Set the total number of workspaces (i3 defaults to 10)
+(setq exwm-workspace-number 10)
+
+    
+;; Configure i3-like workspace switching and moving
+(dotimes (i 10)
+  ;; Bind Super + [0-9] to switch to the corresponding workspace
+  (exwm-input-set-key (kbd (format "s-%d" i))
+                      `(lambda ()
+                         (interactive)
+                         (exwm-workspace-switch-create ,i))))
+
+
+;; We create alist to iterate through below
+;; Does not work in other keyboards only works for trq       
+(defvar my-trq-workspace-alist
+  '(("=" . 0)  ;; Shift + 0
+    ("!" . 1)  ;; Shift + 1
+    ("'" . 2)  ;; Shift + 2
+    ("^" . 3)  ;; Shift + 3
+    ("+" . 4)  ;; Shift + 4
+    ("%" . 5)  ;; Shift + 5
+    ("&" . 6)  ;; Shift + 6
+    ("/" . 7)  ;; Shift + 7
+    ("(" . 8)  ;; Shift + 8
+    (")" . 9))) ;; Shift + 9
+
+    
+;; We iterate through alist and create keybings to move window
+(dolist (pair my-trq-workspace-alist)
+  (let ((key (car pair))
+        (value (cdr pair)))
+    (exwm-input-set-key (kbd (format "s-%s" key))
+                      `(lambda ()
+                        (interactive)
+                        (exwm-workspace-move-window ,value)))))
+    
+    
 ;; Show line numbers
 (global-display-line-numbers-mode)
 
@@ -26,6 +76,9 @@
 
 ;; Add xclip support so we can copy/paste from emacs
 (xclip-mode 1) 
+
+;; Rebind buffer list to neater version
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;; Dunno probably gets rid of redundant save files
 ;; Stole it from SO

@@ -1,16 +1,25 @@
 { config, lib, pkgs, ... }: {
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
+  
   hardware.graphics = { enable = true; };
-
+  
   services.xserver.videoDrivers = [ "nvidia" ];
   boot.initrd.kernelModules = [ "nvidia" ];
-  #boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
 
+  boot.kernelModules = [
+  "nvidia"
+  "nvidia_modeset"
+  "nvidia_uvm"
+  "nvidia_drm"
+  ];
+  
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.production;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_470; # For nvidia gtx 1080
   };
 }

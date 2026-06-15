@@ -44,26 +44,21 @@ in {
       epkgs.markdown-mode
       epkgs.dap-mode
       epkgs.org
-      
-      sidetab # Currently does not work sadly
 
+      
       epkgs.string-inflection
       epkgs.treesit-grammars.with-all-grammars
       epkgs.multiple-cursors
       epkgs.move-text
       epkgs.magit
       epkgs.xclip
-
+      epkgs.envrc
       epkgs.dumb-jump
       epkgs.company      
-      
-      #Auto complete plugins EMOCV (Not used)
-      # epkgs.embark
-      # epkgs.embark-consult
-      # epkgs.marginalia
-      # epkgs.orderless
-      # epkgs.consult
-      # epkgs.vertico
+      epkgs.exwm
+      epkgs.vterm
+      epkgs.use-package
+
       
       (if emacs_theme == "yotsuba" then
         yotsuba-theme

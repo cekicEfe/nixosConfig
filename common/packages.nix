@@ -2,23 +2,23 @@
   nixpkgs.config = {
     permittedInsecurePackages = [
       "python-2.7.18.8"
-      "electron-25.9.0" # "googleearth-pro"
+      "electron-25.9.0" 
     ];
     allowUnfree = true;
   };
 
   environment.systemPackages = with pkgs; [
-    neofetch
-    helix
-    neovim
+    (heroic.override { extraPkgs = pkgs': with pkgs'; [ gamescope gamemode ]; })
 
+    vim
     alacritty
     kitty
 
+    guix
+    guile
     feh
     codeberg-cli
     libreoffice
-    vim
     tmux
     ast-grep
 
@@ -35,8 +35,7 @@
 
     firefox
     librewolf
-    (pkgs.callPackage ./customPackages/torctl/package.nix
-      { })
+    (pkgs.callPackage ./customPackages/torctl/package.nix { })
     tor-browser
     tor
 
