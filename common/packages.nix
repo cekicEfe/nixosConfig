@@ -14,6 +14,8 @@
     alacritty
     kitty
 
+    ollama
+    
     guix
     guile
     feh
@@ -38,7 +40,10 @@
     (pkgs.callPackage ./customPackages/torctl/package.nix { })
     tor-browser
     tor
-
+    authenticator
+    
+    chromium
+    chromedriver
     vscode
 
     ffmpeg-full

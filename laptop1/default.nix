@@ -3,7 +3,6 @@
     ../common/packages.nix
     ../common/modules
 
-    #../common/configuration.nix
     ../common/localTr.nix
     ../common/nixSettings.nix
 

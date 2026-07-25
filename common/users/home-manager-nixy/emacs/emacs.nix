@@ -21,7 +21,7 @@ let
     version = "1.0";
     src = ./sidetab.el;
   };
-  
+
 in {
 
   home.packages = [
@@ -37,15 +37,14 @@ in {
     package = pkgs.emacs;
 
     extraPackages = epkgs: [
-      epkgs.lsp-mode
-      epkgs.haskell-mode
-      epkgs.nix-mode
-      epkgs.rust-mode
-      epkgs.markdown-mode
-      epkgs.dap-mode
+      # epkgs.lsp-mode
+      # epkgs.haskell-mode
+      # epkgs.nix-mode
+      # epkgs.rust-mode
+      # epkgs.markdown-mode
+      # epkgs.dap-mode
       epkgs.org
 
-      
       epkgs.string-inflection
       epkgs.treesit-grammars.with-all-grammars
       epkgs.multiple-cursors
@@ -54,12 +53,11 @@ in {
       epkgs.xclip
       epkgs.envrc
       epkgs.dumb-jump
-      epkgs.company      
+      epkgs.company
       epkgs.exwm
       epkgs.vterm
       epkgs.use-package
 
-      
       (if emacs_theme == "yotsuba" then
         yotsuba-theme
       else if emacs_theme == "catppuccin" then
@@ -68,7 +66,8 @@ in {
         null)
     ];
 
-    extraConfig = (pkgs.lib.readFile ./emacs_config.el)
+    extraConfig =
+      (pkgs.lib.readFile ./emacs_config.el)
       + (if emacs_theme == "yotsuba" then ''
         (add-to-list 'custom-theme-load-path 
                (file-name-directory (locate-library "yotsuba-theme")))

@@ -26,6 +26,7 @@
         inherit inputs;
         used_terminal = "alacritty";
         emacs_theme = "catppuccin";
+        inherit nixpkgs-oldstable;
       };
 
     in {

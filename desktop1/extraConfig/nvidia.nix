@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }: {
+{ config, lib, pkgs, nixpkgs-stable , ... }: {
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
   
@@ -20,6 +20,6 @@
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_470; # For nvidia gtx 1080
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
   };
 }
